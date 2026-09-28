@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Andrew Zhuang</title>
+    <meta name="description" content="Andrew Zhuang 的个人简历｜7 年软件开发经验｜AI 应用开发、Agent / RAG 工程师" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://funet.top/pages/favicon.png"
+    />
+    <style>
+      /*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+      }
+      html {
+        font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+      }
+      body {
+        margin: 0;
+      }
+      hr {
+        height: 0;
+        color: inherit;
+      }
+      abbr[title] {
+        text-decoration: underline dotted;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      samp,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono",
+          Menlo, monospace;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      table {
+        text-indent: 0;
+        border-color: inherit;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+      }
+      ::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      :-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+      legend {
+        padding: 0;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      summary {
+        display: list-item;
+      }
+      :root {
+        --green-50: oklch(50% 0.136 149.71);
+        --green-55: oklch(55% 0.136 149.71);
+        --gray-40: oklch(40% 0 0);
+        --gray-60: oklch(60% 0 0);
+        --gray-80: oklch(80% 0 0);
+        --gray-90: oklch(90% 0 0);
+        --heading-color: var(--green-55);
+        --link-hover-color: var(--green-55);
+        --link-active-color: var(--green-50);
+        --bg-color: #fff;
+        --text-color: var(--gray-40);
+        --muted-color: var(--gray-60);
+        --sans-font: system-ui, -apple-system, "Segoe UI", "PingFang SC",
+          "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+        --base-font-size: 1rem;
+        --page-padding: clamp(1.25rem, 5vw, 3.5rem);
+      }
+      @media (max-width: 524px) {
+        :root {
+          --base-font-size: 0.9375rem;
+          --page-padding: 1.25rem;
+        }
+      }
+      body {
+        background: var(--bg-color);
+        color: var(--text-color);
+        font-family: var(--sans-font);
+        font-optical-sizing: auto;
+        font-size: var(--base-font-size);
+        font-weight: 400;
+        line-height: 1.85;
+        margin: auto;
+        max-width: 960px;
+        padding: clamp(2rem, 6vw, 4rem) var(--page-padding);
+        overflow-wrap: anywhere;
+      }
+      a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: var(--gray-90);
+        text-decoration-color: color-mix(in oklab, currentColor, white 80%);
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: 0.1rem;
+        text-underline-offset: 0.25rem;
+        transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out;
+      }
+      a:hover {
+        text-decoration-color: var(--link-hover-color);
+      }
+      a:active {
+        text-decoration-color: var(--link-active-color);
+      }
+      a:focus-visible {
+        outline: 2px solid var(--heading-color);
+        outline-offset: 4px;
+        border-radius: 2px;
+      }
+      p {
+        margin: 0;
+      }
+      p + p,
+      p + ul {
+        margin-top: 0.75rem;
+      }
+      strong {
+        font-weight: 600;
+      }
+      header {
+        padding-bottom: 1.75rem;
+        border-bottom: 1px solid var(--gray-90);
+      }
+      h1,
+      h2,
+      h3 {
+        color: var(--heading-color);
+        font-weight: 600;
+        margin: 0 0 0.5em 0;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        letter-spacing: 0.08em;
+        margin: 2.75rem 0 1.125rem;
+        text-transform: uppercase;
+      }
+      h3 {
+        align-items: baseline;
+        color: var(--text-color);
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.0625rem;
+        line-height: 1.65;
+        gap: 0.25rem 0.875rem;
+        margin: 2rem 0 0.75rem;
+      }
+      h2 + h3 {
+        margin-top: 0;
+      }
+      h3 .role {
+        font-size: 0.875rem;
+        color: var(--muted-color);
+        font-weight: normal;
+      }
+      h3 .time {
+        color: var(--muted-color);
+        font-size: 0.9em;
+        font-weight: normal;
+        margin-left: auto;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      li + li {
+        margin-top: 0.75rem;
+      }
+      h3 .role:last-child:nth-child(4) {
+        margin-left: auto;
+        white-space: nowrap;
+      }
+      h3 > .role:only-of-type {
+        flex-basis: 100%;
+      }
+      .other-projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem 0.9rem;
+        list-style: none;
+        padding-left: 0;
+      }
+      .other-projects li + li {
+        margin-top: 0;
+      }
+      details {
+        margin-top: 1.5em;
+      }
+      details summary {
+        color: var(--muted-color);
+        cursor: pointer;
+        font-weight: 500;
+        margin-bottom: 0.5em;
+      }
+      details summary + h3 {
+        margin-top: 0;
+      }
+      #tagline {
+        margin-bottom: 1rem;
+        color: var(--text-color);
+        line-height: 1.7;
+      }
+      #contact {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+      }
+      #contact a {
+        align-items: center;
+        color: var(--gray-80);
+        display: flex;
+      }
+      #contact a svg {
+        fill: currentColor;
+        height: 1rem;
+        width: 1rem;
+      }
+      #contact a:hover {
+        color: var(--gray-60);
+      }
+      #contact a:active {
+        color: var(--gray-40);
+      }
+      .header-title {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0.5rem;
+      }
+      .header-title-name {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        line-height: 1.3;
+        letter-spacing: 0.06em;
+        font-weight: 600;
+        color: var(--heading-color);
+      }
+      .project-tech-stack {
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.8;
+        color: var(--muted-color);
+      }
+      .project-tech-stack strong {
+        color: var(--text-color);
+      }
+      .tag-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.375rem 1.25rem;
+        font-size: 0.875rem;
+      }
+      .tag-container > span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .tag-container svg {
+        width: 1rem;
+        height: 1rem;
+        flex-shrink: 0;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        color: var(--muted-color);
+      }
+      @media (max-width: 600px) {
+        h2 {
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+          font-size: 1.0625rem;
+        }
+        h3 {
+          gap: 0.25rem 0.75rem;
+          font-size: 1rem;
+          margin-top: 1.75rem;
+        }
+        h2 + h3 {
+          margin-top: 0;
+        }
+        h3 > span:first-child {
+          flex-basis: 100%;
+        }
+        h3 .role:last-child:nth-child(4) {
+          margin-left: 0;
+        }
+        .tag-container {
+          gap: 0.375rem 1rem;
+        }
+        li + li {
+          margin-top: 0.875rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-title">
+        <span class="header-title-name">庄浩</span>
+      </div>
+      <div id="tagline">
+        AI 应用开发 · Agent / RAG 工程师 · 7 年软件开发经验
+      </div>
+      <div class="tag-container">
+        <span>男</span>
+        <span>30 岁</span>
+        <span aria-label="电话：13006537356">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3l2 5-2 2a14 14 0 0 0 6 6l2-2 5 2v3a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2z" /></svg>
+          13006537356
+        </span>
+        <span aria-label="邮箱：andrew_zh@126.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m2 6 10 7 10-7" /></svg>
+          andrew_zh@126.com
+        </span>
+      </div>
+    </header>
+    <h2>教育背景</h2>
+    <h3>
+      <span>鲁东大学</span>
+      <span class="role">软件工程</span>
+      <span class="role">统招本科</span>
+      <span class="role">2016 — 2020</span>
+    </h3>
+    <p>
+      <strong>英语能力：</strong>大学英语六级（CET-6）· 雅思 7 分，英语可作为工作语言。
+    </p>
+    <p>
+      <a href="https://www.funet.top/pages/zh/index.html" target="_blank" rel="noreferrer">中文在线简历</a>
+      &nbsp;|&nbsp;
+      <a href="https://www.funet.top/pages/en/index.html" target="_blank" rel="noreferrer">英文在线简历</a>
+    </p>
+    <h2>专业技能</h2>
+    <ul>
+      <li>
+        <strong>Agent / Workflow：</strong>熟悉 LangChain、LangGraph 工作流开发，具备意图识别、工具调用、多轮对话状态管理与结构化输出实践；熟悉 ReAct、Router、Supervisor、HITL、Checkpoint 等设计模式及多 Agent 协作思路。
+      </li>
+      <li>
+        <strong>RAG / 知识工程：</strong>掌握 MinerU 文档解析、图文信息增强、结构化切分、Embedding、Milvus 向量索引、稠密／稀疏混合检索、RRF、Cross-Encoder Reranking、MMR、Query Rewrite 与 HyDE，能够围绕召回质量和上下文完整性优化检索链路。
+      </li>
+      <li>
+        <strong>评估 / 可观测性：</strong>使用 Langfuse 进行 LLM 应用链路追踪、分析与数据集实验，结合 LLM-as-a-Judge 与端到端任务完成率评估应用效果；使用 ranx 进行检索评估，熟悉 Recall@K、MRR、NDCG 等指标及 Bad Case 分析，支持检索策略与应用效果的对比和迭代。
+      </li>
+      <li>
+        <strong>模型应用 / 微调：</strong>熟悉大语言模型、Embedding 与 Reranker 模型的选型、接入及部署，具备工具调用、结构化输出与 RAG 场景实践；了解监督微调（SFT）、LoRA / QLoRA 参数高效微调及 PEFT 工具，了解指令数据构建、训练配置、微调效果评估与模型量化。
+      </li>
+      <li>
+        <strong>Python / 后端工程：</strong>熟悉 Python、FastAPI、Pydantic、SQLAlchemy 与异步任务编排，使用 PostgreSQL、Milvus、MinIO 构建文档存储、向量索引及会话持久化，关注接口分层、并发控制、异常处理与可测试性。
+      </li>
+      <li>
+        <strong>全栈交付 / AI Coding：</strong>具备 React、TypeScript 与 Node.js 全栈开发经验，熟悉 Linux、Docker；熟练使用 Claude Code、Codex、MCP 与 Agent Skills，将需求规范、编码和测试串联为可复用的开发流程。
+      </li>
+    </ul>
+    <h2>工作经历</h2>
+    <h3>
+      <span>银河集团</span>
+      <span class="role">大模型应用工程师</span>
+      <span class="role">2025.05 — 至今</span>
+    </h3>
+    <ul>
+      <li>负责集团知识库与智能客服的 AI 应用开发，交付覆盖身份规划、房产、教育及企业服务的知识检索与问答平台，累计接入约 3,200 份业务资料，支撑资料集中管理与员工查阅。</li>
+      <li>将 Kids Bay 智能客服与订单、物流、退款等中台业务连接，实现多轮咨询与业务办理；建立场景评测及问题回流机制，同一评测集上的端到端任务完成率由约 68% 提升至约 85%。</li>
+    </ul>
+    <h3>
+      <span>财新传媒有限公司</span>
+      <span class="role">全栈工程师</span>
+      <span class="role">2020.09 — 2025.05</span>
+    </h3>
+    <ul>
+      <li>负责财新各业务的前后端开发与部署交付，轻松读 AI 阅读助手的LangChain架构设计，在财新 App 内集成文章总结、文章问答与相关推荐，完成从阅读页面到模型服务的完整功能链路。</li>
+      <li>推动 H5 低代码平台在部门运营活动中落地，负责业务组件、后端接口、部署及内部培训推广，沉淀 20+ 组件与弹窗，支撑产出 50+ 运营活动页面，形成可复用的活动搭建与发布流程。</li>
+    </ul>
+    <h3>
+      <span>飞鹤乳业</span>
+      <span class="role">前端工程师</span>
+      <span class="role">2020.03 — 2020.09</span>
+    </h3>
+    <ul>
+      <li>负责飞鹤智能导购小程序相关开发工作。</li>
+    </ul>
+    <h2>开源项目</h2>
+    <h3>
+      <a href="https://github.com/z114880/everything-agent" target="_blank" rel="noreferrer">Everything Agent · 可视化个人助理</a>
+    </h3>
+    <p>
+      独立设计并开发基于本地运行的Agent，支持多轮对话、工具调用、跨会话记忆与 Skills 扩展。自研 Agent Runtime，打通模型接入、上下文管理、受控工具执行与评测链路，通过 React 控制台展示推理、检索和工具执行过程，支持记忆管理、模型配置与实验对比。
+    </p>
+    <p>
+      <strong>GitHub：</strong><a href="https://github.com/z114880/everything-agent" target="_blank" rel="noreferrer">github.com/z114880/everything-agent</a>
+    </p>
+    <p class="project-tech-stack">
+      <strong>技术栈：</strong>TypeScript · Node.js · React · SQLite / FTS5 · Agent Runtime · Tool Calling · Agent Skills · Langfuse · Vite · Vitest
+    </p>
+    <ul>
+      <li>
+        <strong>Agent Runtime：</strong>设计模型、工具与存储解耦的 Agent Loop，统一模型推理、工具调用及结果回传，通过迭代上限、超时与取消机制约束执行；独立实现轻量图引擎，支持条件路由、并行调度、确定性状态合并与写入冲突检测。
+      </li>
+      <li>
+        <strong>长期记忆与上下文管理：</strong>基于 SQLite 分离会话历史与长期事实，由轻量模型判断召回需求，结合 FTS5 / BM25、向量检索、RRF 与 MMR 完成记忆召回；通过证据引用、版本校验和事务提交管理事实更新与合并，后台队列异步写入并整理记忆，配合历史会话回查、Token 预算与自动压缩，支持跨会话信息复用。
+      </li>
+      <li>
+        <strong>Skills 与工具执行边界：</strong>实现基于 SKILL.md 的技能管理，按“目录发现—正文加载”渐进式注入指令，减少常驻上下文占用；结合工具参数校验、人工审批与操作系统沙箱控制执行权限，接入 macOS Seatbelt 和 Linux bubblewrap，限制文件访问与网络权限，并在超时或取消时回收子进程。
+      </li>
+      <li>
+        <strong>执行可视化与问题回溯：</strong>基于 React 构建 Agent 执行画布，以服务端图定义统一节点和依赖关系，通过运行时事件与 SSE 驱动记忆召回、上下文组装、模型推理及后台任务的状态展示；持久化 JSONL Trace，关联会话、模型与工具调用，记录耗时和异常并脱敏敏感字段，支持定位执行失败与记忆处理问题。
+      </li>
+      <li>
+        <strong>隔离评测与回归验证：</strong>接入 Langfuse 数据集实验，固定数据集版本、运行配置与 Skills，为每条用例创建独立 Runtime、数据库及工作目录，使用真实模型和工具执行单轮、多轮任务，支持从统一记忆快照启动；回传模型与工具轨迹供平台评估器评分，分离执行、同步和评分状态，同步失败重传不重复执行工具；结合 Vitest 验证模块公开行为，为提示词、记忆策略与运行时迭代提供回归依据。
+      </li>
+    </ul>
+    <h3>
+      <a href="https://github.com/z114880/h5-lowcode" target="_blank" rel="noreferrer">H5-Lowcode · AI 页面搭建平台</a>
+    </h3>
+    <p>
+      面向 H5 页面搭建，将自然语言生成、对话式修改与可视化拖拽编辑结合，支持从页面初稿生成到人工调整、实时预览和代码导出，降低活动页面的搭建成本。
+    </p>
+    <p>
+      <strong>GitHub：</strong><a href="https://github.com/z114880/h5-lowcode" target="_blank" rel="noreferrer">github.com/z114880/h5-lowcode</a>
+      &nbsp;|&nbsp;
+      <strong>预览：</strong><a href="https://www.funet.top" target="_blank" rel="noreferrer">www.funet.top</a>
+    </p>
+    <p class="project-tech-stack">
+      <strong>技术栈：</strong>React 18 · TypeScript · Vite · Tailwind CSS · Web Components · pnpm Monorepo · Zod · OpenAI Compatible API
+    </p>
+    <ul>
+      <li>
+        <strong>AI 生成与对话式编辑：</strong>接入大语言模型，结合页面 Schema、组件规范与对话上下文，实现页面生成及布局、文案和样式修改；支持流式反馈，生成结果经校验后同步画布，支持撤销与拖拽调整。
+      </li>
+      <li>
+        <strong>结构化输出与编辑约束：</strong>以 Zod 统一生成模式的 JSON Schema 与客户端校验契约，结合组件白名单、属性枚举、布局和事件规则校验并修正模型输出。
+      </li>
+      <li>
+        <strong>编辑器与代码生成：</strong>采用 Monorepo 拆分编辑器、Web Components 物料与代码生成器，实现拖拽布局、样式与动画配置、弹窗编辑、模板导入导出及撤销重做；基于统一 Schema 生成 HTML、CSS 与 JavaScript，串联实时预览、代码下载和部署。
+      </li>
+    </ul>
+    <h2>项目经历</h2>
+    <h3>
+      <span>Galaxy RAG · 企业知识库平台</span>
+      <span class="role">银河集团｜集团内部知识库</span>
+    </h3>
+    <p>
+      面向银河集团多业务线的内部知识检索与问答平台，围绕香港身份规划与续签、房产服务、教育规划、企业设立与经营等业务场景，统一组织政策资料、产品与服务说明、业务办理流程及内部培训文档。
+    </p>
+    <p class="project-tech-stack">
+      <strong>技术栈：</strong>Python · FastAPI · LangGraph · MinerU · Milvus · PostgreSQL · MinIO · ranx · bge-m3 · bge-reranker-large · deepseek-v4-pro
+    </p>
+    <ul>
+      <li>
+        <strong>文档解析与知识组织：</strong>基于 MinerU 将 PDF 转换为 Markdown，结合视觉模型生成图片描述；设计覆盖正文、列表、表格和图片的结构化切分，保留标题层级与前向上下文，长表格按行拆分并重复表头，减少材料清单、政策条件等内容切分后的语义缺失。
+      </li>
+      <li>
+        <strong>多路召回与 Reranking：</strong>本地链路以 bge-m3 构建 Dense、Sparse 与 HyDE 三路召回，使用 RRF 融合候选结果，通过 bge-reranker-large 完成 Reranking，再结合分差截断与 MMR 筛选上下文，兼顾业务术语匹配、语义相关性与结果多样性，减少相似段落重复占用上下文。
+      </li>
+      <li>
+        <strong>多轮问答与证据追溯：</strong>使用 deepseek-v4-pro 完成 Query Understanding，结合会话历史改写查询、补全追问中的指代与条件，并生成用于检索的 HyDE 假设文档；将检索来源纳入回答约束，要求证据不足时明确说明，输出可追溯的文档引用与图片来源，并持久化对话和引用快照，支持刷新后恢复历史。
+      </li>
+      <li>
+        <strong>工作流与模型适配：</strong>使用 LangGraph 编排上传、解析、图文增强和向量入库，提供任务阶段、处理进度与失败状态；分离本地 Embedding 与 Reranking、远程查询理解与答案生成的模型职责，并通过并发限制、模型预热和就绪检查提高运行可控性。
+      </li>
+      <li>
+        <strong>评估与持续优化：</strong>采用 ranx 评估检索效果，结合 Bad Case 分析迭代切分策略、多路召回与 Reranking 参数。以 300 条业务问答及人工标注的相关文档为评测集，相较仅使用 bge-m3 稠密检索的基线，Recall@10 从约 65% 提升至约 85%，MRR@10 从 0.61 提升至 0.79；固定测试环境下，单并发检索链路 P95 耗时为 1.2 秒（含查询改写、HyDE 与 Reranking，不含最终答案生成）。
+      </li>
+      <li>
+        <strong>企业应用交付：</strong>基于 FastAPI、PostgreSQL 与 MinIO 实现登录认证、共享知识库和用户级任务／会话隔离；支持新文档完成向量化后替换旧版本，形成可导入、可更新、可追溯的知识使用流程，支撑集团业务资料集中管理与员工查阅。累计接入约 3,200 份政策资料、产品手册、业务流程及培训文档，构建约 2.6 万个可检索知识片段，覆盖身份规划、房产服务、教育规划与企业服务等业务线。
+      </li>
+    </ul>
+    <h3>
+      <span>Kids Bay 智能客服</span>
+      <span class="role">银河集团｜早教产品电商服务</span>
+    </h3>
+    <p>
+      面向银河集团 Kidsbay 早教玩具与月龄盒业务的智能客服 Agent，覆盖商品咨询、商城规则问答、相似商品推荐、订单与物流查询、退款申请及人工转接，将自然语言交互、知识检索与电商中台流程连接，支持多轮信息收集、订单卡片交互及业务中断后继续办理，减少用户反复描述需求与重复填写信息。
+    </p>
+    <p class="project-tech-stack">
+      <strong>技术栈：</strong>Python · FastAPI · LangChain · LangGraph · Langfuse · Tool Calling · RAG · Pydantic · PostgreSQL · SQLAlchemy · HTTPX · deepseek-v4-pro
+    </p>
+    <ul>
+      <li>
+        <strong>Agent 与业务流程协同：</strong>基于 LangChain create_agent 与 deepseek-v4-pro 完成意图识别、槽位提取和工具选择，使用 LangGraph 管理会话状态；将业务步骤交由确定性流程执行器推进，接入订单、物流与退款中台接口，业务结果由接口数据和模板直接生成，避免模型自行编造办理状态。
+      </li>
+      <li>
+        <strong>知识问答与服务分流：</strong>通过 RAG 工具检索商品说明、购买规则与售后政策，将相关知识作为上下文生成回答；采用“检索—生成”的轻量链路，区分知识咨询与业务办理，咨询过程中保留当前任务状态，支持用户在问答后继续办理业务。
+      </li>
+      <li>
+        <strong>商品推荐与人工协同：</strong>结合用户发送的商品卡片提取商品 ID，调用相似商品推荐能力辅助选购；将人工转接封装为独立流程工具，根据用户意图切换服务入口，覆盖自助咨询、业务办理与人工服务场景。
+      </li>
+      <li>
+        <strong>低代码流程编排：</strong>通过低代码流程编排可视化配置客服业务流程，支持开始、信息收集、业务动作、回复、结束等节点类型，以及条件分支、槽位配置与回复模板；后端解析流程定义，动态生成 Pydantic 参数模型与 StructuredTool，并校验节点连接、槽位及业务动作，让既有业务能力的流程调整无需修改 Agent 核心逻辑。
+      </li>
+      <li>
+        <strong>多轮补槽与任务恢复：</strong>支持从文本和订单卡片收集业务信息，缺少订单号、退款原因时按流程追问；按任务隔离槽位，用户切换业务时暂停原任务，明确要求继续后恢复原步骤，避免跨任务信息串用与重复收集，闲聊不打断正在办理的业务。
+      </li>
+      <li>
+        <strong>Langfuse 评测与持续优化：</strong>接入 Langfuse 追踪多轮对话、知识检索与工具调用，构建覆盖商品咨询、订单物流、退款申请及人工转接的场景评测集；结合规则校验与 LLM-as-a-Judge 构建自定义 Evaluator，覆盖意图识别、槽位提取、工具及参数正确性、回答忠实性、售后政策遵循、人工转接恰当性与端到端任务完成率，通过 Bad Case 回流迭代提示词、工具描述和流程配置。以最终业务状态及回复满足场景预期作为任务完成标准，同一评测集上任务完成率从约 68% 提升至约 85%。
+      </li>
+      <li>
+        <strong>会话持久化与并发控制：</strong>采用 AsyncPostgresSaver 保存 LangGraph Checkpoint，将用户、会话与图线程分别建模；通过 PostgreSQL 事务级 advisory lock 串行处理同一用户请求，防止并发覆盖状态，支持会话超时隔离与历史消息、订单卡片恢复。
+      </li>
+    </ul>
+    <h3>
+      <span>财新轻松读 · AI 阅读助手</span>
+      <span class="role">财新传媒｜全流程开发</span>
+    </h3>
+    <p>
+      财新 App 内嵌的 AI 阅读助手，提供文章总结、围绕当前文章的问答及相关文章推荐，帮助用户快速理解报道内容并延伸阅读；负责方案设计、前后端开发、模型接入与部署交付。
+    </p>
+    <p class="project-tech-stack">
+      <strong>技术栈：</strong>Next.js · NestJS · LangChain · MySQL · Milvus · bge-base-zh-v1.5 · bge-reranker-base
+    </p>
+    <ul>
+      <li>
+        <strong>文章总结与问答：</strong>基于 LangChain 编排模型调用，将文章全文作为上下文生成摘要与核心要点，并结合用户问题及必要的对话历史实现文章问答；通过提示词约束回答依据，要求文章信息不足时明确说明，使用 MySQL 保存文章与摘要供后续复用。
+      </li>
+      <li>
+        <strong>相关文章推荐：</strong>使用 bge-base-zh-v1.5 对文章标题与摘要生成稠密向量，在 Milvus 中建立文章级索引；基于当前文章向量进行 ANN 召回，使用 bge-reranker-base 对候选文章的标题与摘要进行相关性重排，结合自身排除与重复内容过滤，提供基于文章内容的延伸阅读。
+      </li>
+      <li>
+        <strong>前后端与模型集成：</strong>基于 Next.js 开发财新 App 内嵌页面，完成摘要展示、问答交互与推荐文章入口；使用 NestJS 构建后端业务接口，集成 LangChain 模型调用、MySQL 数据存储与 Milvus 向量检索，完成从前端交互到后端服务、模型接入与部署的全流程交付。
+      </li>
+    </ul>
+    <h3>
+      <span>H5-Lowcode · 运营活动适配</span>
+      <span class="role">财新传媒｜全栈开发与维护</span>
+    </h3>
+    <p>
+      基于 h5-lowcode 对接部门运营活动业务，负责业务组件开发、后端接口、部署流程及内部推广，沉淀 20+ 组件与弹窗，支撑产出 50+ 运营活动页面。
+    </p>
+    <p class="project-tech-stack">
+      <strong>技术栈：</strong>React 18 · TypeScript · Web Components · Tailwind CSS · Node.js · NestJS · TypeORM
+    </p>
+    <ul>
+      <li>
+        <strong>业务物料与运营适配：</strong>围绕活动场景开发可配置组件、弹窗与内置动画，适配微信分享及页面配置，复用平台拖拽和模板能力完成活动搭建；负责部门内培训、推广与日常维护，将重复开发沉淀为可复用物料。
+      </li>
+      <li>
+        <strong>可视化编辑与交互：</strong>基于 React 实现组件拖拽定位、尺寸调整与样式配置，结合辅助线、弹窗可视化编辑和动画配置，支持运营直观调整活动布局与交互效果；接入 i18n 多语言，完善页面与分享配置。
+      </li>
+      <li>
+        <strong>页面生成与部署：</strong>串联前端 Schema 编辑、实时预览和代码打包，后端接收 ZIP 产物并解压至活动目录，完成页面部署；结合模板导入导出与撤销重做，支持活动页面复用和调整，打通从可视化搭建到发布的全流程。
+      </li>
+    </ul>
+    <h3>其他项目经历</h3>
+    <p class="other-projects">财新 VMS 管理系统 · 财新网移动端重构 · 财新 CMS · 飞鹤智能导购</p>
+    <h2>致谢</h2>
+    <p>感谢您花时间阅读我的简历，希望有机会能和您共事</p>
+  </body>
+</html>
