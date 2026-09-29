@@ -138,7 +138,7 @@
         <strong>评估 / 可观测性：</strong>使用 Langfuse 进行 LLM 应用链路追踪、分析与数据集实验，结合 LLM-as-a-Judge 与端到端任务完成率评估应用效果；使用 ranx 进行检索评估，熟悉 Recall@K、MRR、NDCG 等指标及 Bad Case 分析，支持检索策略与应用效果的对比和迭代。
       </li>
       <li>
-        <strong>模型应用 / 微调：</strong>熟悉大语言模型、Embedding 与 Reranker 模型的选型、接入及部署，具备工具调用、结构化输出与 RAG 场景实践；了解监督微调（SFT）、LoRA / QLoRA 参数高效微调及 PEFT 工具，了解指令数据构建、训练配置、微调效果评估与模型量化。
+        <strong>模型应用 / 微调：</strong>熟悉大语言模型、Embedding 与 Reranker 模型的选型、接入及部署，具备工具调用、结构化输出与 RAG 场景实践；了解监督微调（SFT）、LoRA / QLoRA 参数高效微调及 LlamaFactory，了解指令数据构建、训练配置、微调效果评估与模型量化。
       </li>
       <li>
         <strong>Python / 后端工程：</strong>熟悉 Python、FastAPI、Pydantic、SQLAlchemy 与异步任务编排，使用 PostgreSQL、Milvus、MinIO 构建文档存储、向量索引及会话持久化，关注接口分层、并发控制、异常处理与可测试性。
@@ -235,7 +235,7 @@
       面向银河集团多业务线的内部知识检索与问答平台，围绕香港身份规划与续签、房产服务、教育规划、企业设立与经营等业务场景，统一组织政策资料、产品与服务说明、业务办理流程及内部培训文档。
     </p>
     <p class="project-tech-stack">
-      <strong>技术栈：</strong><span>Python</span>、<span>FastAPI</span>、<span>LangGraph</span>、<span>MinerU</span>、<span>Milvus</span>、<span>PostgreSQL</span>、<span>MinIO</span>、<span>ranx</span>、<span>bge-m3</span>、<span>bge-reranker-large</span>、<span>deepseek-v4-pro</span>
+      <strong>技术栈：</strong><span>Python</span>、<span>FastAPI</span>、<span>LangGraph</span>、<span>MinerU</span>、<span>Milvus</span>、<span>PostgreSQL</span>、<span>MinIO</span>、<span>ranx</span>、<span>bge-m3</span>、<span>bge-reranker-large</span>、<span>qwen-turbo</span>、<span>qwen3.7-plus</span>
     </p>
     <ul>
       <li>
@@ -245,7 +245,7 @@
         <strong>多路召回与 Reranking：</strong>本地链路以 bge-m3 构建 Dense、Sparse 与 HyDE 三路召回，使用 RRF 融合候选结果，通过 bge-reranker-large 完成 Reranking，再结合分差截断与 MMR 筛选上下文，兼顾业务术语匹配、语义相关性与结果多样性，减少相似段落重复占用上下文。
       </li>
       <li>
-        <strong>多轮问答与证据追溯：</strong>使用 deepseek-v4-pro 完成 Query Understanding，结合会话历史改写查询、补全追问中的指代与条件，并生成用于检索的 HyDE 假设文档；将检索来源纳入回答约束，要求证据不足时明确说明，输出可追溯的文档引用与图片来源，并持久化对话和引用快照，支持刷新后恢复历史。
+        <strong>多轮问答与证据追溯：</strong>使用 qwen-turbo 完成 Query Understanding，结合会话历史改写查询、补全追问中的指代与条件，并生成用于检索的 HyDE 假设文档；由 qwen3.7-plus 基于检索上下文生成最终回答，将检索来源纳入回答约束，要求证据不足时明确说明，输出可追溯的文档引用与图片来源，并持久化对话和引用快照，支持刷新后恢复历史。
       </li>
       <li>
         <strong>工作流与模型适配：</strong>使用 LangGraph 编排上传、解析、图文增强和向量入库，提供任务阶段、处理进度与失败状态；分离本地 Embedding 与 Reranking、远程查询理解与答案生成的模型职责，并通过并发限制、模型预热和就绪检查提高运行可控性。
@@ -265,14 +265,14 @@
       面向银河集团 Kidsbay 早教玩具与月龄盒业务的智能客服 Agent，覆盖商品咨询、商城规则问答、相似商品推荐、订单与物流查询、退款申请及人工转接，将自然语言交互、知识检索与电商中台流程连接，支持多轮信息收集、订单卡片交互及业务中断后继续办理，减少用户反复描述需求与重复填写信息。
     </p>
     <p class="project-tech-stack">
-      <strong>技术栈：</strong><span>Python</span>、<span>FastAPI</span>、<span>LangChain</span>、<span>LangGraph</span>、<span>Langfuse</span>、<span>Tool Calling</span>、<span>RAG</span>、<span>Pydantic</span>、<span>PostgreSQL</span>、<span>SQLAlchemy</span>、<span>HTTPX</span>、<span>deepseek-v4-pro</span>
+      <strong>技术栈：</strong><span>Python</span>、<span>FastAPI</span>、<span>LangChain</span>、<span>LangGraph</span>、<span>Langfuse</span>、<span>Tool Calling</span>、<span>RAG</span>、<span>Pydantic</span>、<span>PostgreSQL</span>、<span>SQLAlchemy</span>、<span>HTTPX</span>、<span>qwen3.7-plus</span>
     </p>
     <ul>
       <li>
-        <strong>Agent 与业务流程协同：</strong>基于 LangChain create_agent 与 deepseek-v4-pro 完成意图识别、槽位提取和工具选择，使用 LangGraph 管理会话状态；将业务步骤交由确定性流程执行器推进，接入订单、物流与退款中台接口，业务结果由接口数据和模板直接生成，避免模型自行编造办理状态。
+        <strong>Agent 与业务流程协同：</strong>基于 LangChain create_agent 与 qwen3.7-plus 完成意图识别、槽位提取和工具选择，使用 LangGraph 管理会话状态；将业务步骤交由确定性流程执行器推进，接入订单、物流与退款中台接口，业务结果由接口数据和模板直接生成，避免模型自行编造办理状态。
       </li>
       <li>
-        <strong>知识问答与服务分流：</strong>通过 RAG 工具检索商品说明、购买规则与售后政策，将相关知识作为上下文生成回答；采用“检索—生成”的轻量链路，区分知识咨询与业务办理，咨询过程中保留当前任务状态，支持用户在问答后继续办理业务。
+        <strong>知识问答与服务分流：</strong>通过 RAG 工具检索商品说明、购买规则与售后政策，由 qwen3.7-plus 基于相关知识生成回答；采用“检索—生成”的轻量链路，区分知识咨询与业务办理，咨询过程中保留当前任务状态，支持用户在问答后继续办理业务。
       </li>
       <li>
         <strong>商品推荐与人工协同：</strong>结合用户发送的商品卡片提取商品 ID，调用相似商品推荐能力辅助选购；将人工转接封装为独立流程工具，根据用户意图切换服务入口，覆盖自助咨询、业务办理与人工服务场景。
