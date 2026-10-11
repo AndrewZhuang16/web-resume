@@ -73,6 +73,9 @@
       #contact a:active { color: var(--gray-40); }
       .header-title { display: flex; flex-wrap: wrap; margin-bottom: 0.5rem; }
       .header-title-name { font-size: clamp(2rem, 4vw, 2.5rem); line-height: 1.3; letter-spacing: 0.06em; font-weight: 600; color: var(--heading-color); }
+      .project-link { display: inline; }
+      .project-link strong { flex-shrink: 0; }
+      .project-link a { display: inline-block; max-width: 100%; vertical-align: top; overflow-wrap: anywhere; }
       .project-tech-stack { font-size: 0.875rem; font-weight: 600; line-height: 1.8; color: #555; }
       .project-tech-stack > span { white-space: nowrap; }
       .project-tech-stack strong { color: var(--text-color); }
@@ -80,6 +83,10 @@
       .tag-container > span, .contact-group > span { display: inline-flex; align-items: center; gap: 0.35rem; }
       .contact-group { display: inline-flex; gap: inherit; white-space: nowrap; flex-shrink: 0; }
       .tag-container svg { width: 1rem; height: 1rem; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; color: var(--muted-color); }
+      @media (max-width: 768px) {
+        .project-links { display: flex; flex-direction: column; gap: 0.25rem; }
+        .project-link-separator { display: none; }
+      }
       @media (max-width: 600px) {
         h2 { margin-top: 1.75rem; margin-bottom: 1rem; font-size: 1.0625rem; }
         h3 { gap: 0.25rem 0.75rem; font-size: 1rem; margin-top: 1.5rem; }
@@ -185,8 +192,8 @@
     <p>
       独立设计并开发基于本地运行的Agent，支持多轮对话、工具调用、跨会话记忆与 Skills 扩展。自研 Agent Runtime，打通模型接入、上下文管理、受控工具执行与评测链路，通过 React 控制台展示推理、检索和工具执行过程，支持记忆管理、模型配置与实验对比。
     </p>
-    <p>
-      <strong>GitHub：</strong><a href="https://github.com/AndrewZhuang16/everything-agent" target="_blank" rel="noreferrer">github.com/AndrewZhuang16/everything-agent</a>
+    <p class="project-links">
+      <span class="project-link"><strong>GitHub：</strong><a href="https://github.com/AndrewZhuang16/everything-agent" target="_blank" rel="noreferrer">github.com/<wbr>AndrewZhuang16/<wbr>everything-agent</a></span>
     </p>
     <p class="project-tech-stack">
       <strong>技术栈：</strong><span>TypeScript</span>、<span>Node.js</span>、<span>React</span>、<span>SQLite / FTS5</span>、<span>Agent Runtime</span>、<span>Tool Calling</span>、<span>Agent Skills</span>、<span>Langfuse</span>、<span>Vite</span>、<span>Vitest</span>
@@ -211,10 +218,10 @@
     <p>
       面向 H5 页面搭建，将自然语言生成、对话式修改与可视化拖拽编辑结合，支持从页面初稿生成到人工调整、实时预览和代码导出，降低活动页面的搭建成本。
     </p>
-    <p>
-      <strong>GitHub：</strong><a href="https://github.com/AndrewZhuang16/h5-lowcode" target="_blank" rel="noreferrer">github.com/AndrewZhuang16/h5-lowcode</a>
-      &nbsp;|&nbsp;
-      <strong>预览：</strong><a href="https://www.funet.top" target="_blank" rel="noreferrer">www.funet.top</a>
+    <p class="project-links">
+      <span class="project-link"><strong>GitHub：</strong><a href="https://github.com/AndrewZhuang16/h5-lowcode" target="_blank" rel="noreferrer">github.com/<wbr>AndrewZhuang16/<wbr>h5-lowcode</a></span>
+      <span class="project-link-separator">&nbsp;|&nbsp;</span>
+      <span class="project-link"><strong>预览：</strong><a href="https://www.funet.top" target="_blank" rel="noreferrer">www.funet.top</a></span>
     </p>
     <p class="project-tech-stack">
       <strong>技术栈：</strong><span>React 18</span>、<span>TypeScript</span>、<span>Vite</span>、<span>Tailwind CSS</span>、<span>Web Components</span>、<span>pnpm Monorepo</span>、<span>Zod</span>、<span>OpenAI Compatible API</span>
