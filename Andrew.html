@@ -118,7 +118,7 @@
         </h3>
         <h4 class="project-title">Galaxy RAG — Enterprise Knowledge Platform</h4>
         <ul>
-          <li>Built an internal search and Q&amp;A platform covering approximately <strong>3,200 documents and 26,000 searchable passages</strong> across residency planning, real estate, education, and corporate services, with authenticated access and traceable source citations.</li>
+          <li>Led technology selection, architecture, and core implementation of an enterprise search and Q&amp;A platform covering approximately <strong>3,200 documents and 26,000 searchable passages</strong> across residency planning, real estate, education, and corporate services, with authenticated access and traceable source citations.</li>
           <li>Improved <strong>Recall@10 from ~65% to ~85%</strong> and <strong>MRR@10 from 0.61 to 0.79</strong> against a bge-m3 dense-only baseline on 300 manually annotated business questions. Combined dense/sparse retrieval and HyDE with reciprocal rank fusion, cross-encoder reranking, and MMR.</li>
           <li>Designed a MinerU and LangGraph ingestion pipeline that preserves heading context, table structure, and image descriptions. Added conversational query rewriting, document version replacement, and persisted answer citations to support follow-up questions and knowledge updates.</li>
           <li>Measured retrieval P95 latency of <strong>1.2 seconds</strong> in a fixed test environment with one concurrent request, including query rewriting, HyDE, and reranking, excluding final answer generation. Used ranx and failure analysis to refine chunking and retrieval parameters.</li>
@@ -126,7 +126,7 @@
         <h4 class="project-title">Kids Bay — E-commerce Customer Service Agent</h4>
         <ul>
           <li>Improved <strong>end-to-end task completion from ~68% to ~85%</strong> on the same scenario evaluation set. Used Langfuse traces, rule-based checks, and LLM-as-a-Judge to refine intent recognition, tool arguments, policy compliance, and final responses.</li>
-          <li>Integrated LangChain and LangGraph with product knowledge, order tracking, refunds, recommendations, and human handoffs. Separated model-driven intent and slot extraction from deterministic transaction workflows, deriving business status directly from API responses.</li>
+          <li>Designed a LangChain and LangGraph architecture that separates model-driven intent recognition and tool selection from deterministic business workflows. Integrated order tracking, logistics queries, and refund requests with commerce APIs, deriving transaction status directly from API responses.</li>
           <li>Built configurable customer service workflows with conditional branches and reply templates, generating validated Pydantic models and tools from workflow definitions. Enabled changes to existing business flows without modifying the agent's core logic.</li>
           <li>Implemented multi-turn information collection, task switching, and explicit task resumption. Used PostgreSQL-backed checkpoints and transaction-level advisory locks to preserve conversation state and prevent concurrent requests from overwriting it.</li>
         </ul>
@@ -136,10 +136,20 @@
           <span class="role">Full-stack Engineer</span>
           <span class="time">Sep 2020 – Mar 2025</span>
         </h3>
+        <h4 class="project-title">H5-Lowcode — AI Page Builder &amp; Campaign Platform</h4>
+        <p class="project-tech-stack"><strong>Role:</strong> Full-stack Development &amp; Maintenance</p>
+        <p class="project-links"><span class="project-link"><strong>GitHub:</strong> <a href="https://github.com/AndrewZhuang16/h5-lowcode">github.com/<wbr>AndrewZhuang16/<wbr>h5-lowcode</a></span> <span class="project-link-separator">&nbsp;|&nbsp;</span> <span class="project-link"><strong>Demo:</strong> <a href="https://www.funet.top">www.funet.top</a></span></p>
+        <p class="project-tech-stack"><strong>Tech Stack:</strong> <span>React</span>, <span>TypeScript</span>, <span>Web Components</span>, <span>Zod</span>, <span>Node.js</span>, <span>NestJS</span>, <span>TypeORM</span></p>
         <ul>
-          <li>Delivered <strong>Easy Read</strong>, an AI reading assistant embedded in the Caixin app, owning architecture, frontend and backend development, model integration, and deployment with Next.js, NestJS, and LangChain.</li>
+          <li>Led the rollout of an H5 low-code platform for Caixin's marketing team, delivering <strong>20+ reusable components and pop-ups used across 50+ campaign pages</strong>. Extended the same platform with LLM-powered page generation and conversational editing.</li>
+          <li>Built natural-language workflows for generating pages and editing layout, copy, and styles, with streaming feedback and schema-validated updates to the visual canvas. Unified model output and client validation through Zod schemas, component allowlists, and layout and event constraints.</li>
+          <li>Separated the editor, Web Components library, and code generator into monorepo packages. Supported drag-and-drop editing, animation and pop-up controls, template import/export, and undo/redo; generated HTML, CSS, and JavaScript from a shared page schema.</li>
+          <li>Delivered backend APIs and a publishing workflow from live preview and code export to ZIP upload and deployment. Led internal training and ongoing maintenance to support adoption by the marketing team.</li>
+        </ul>
+        <h4 class="project-title">Easy Read — AI Reading Assistant</h4>
+        <ul>
+          <li>Designed the LangChain application architecture and delivered frontend and backend features, model integration, and deployment for <strong>Easy Read</strong>, an AI reading assistant embedded in the Caixin app, using Next.js and NestJS.</li>
           <li>Built article summarization and contextual Q&amp;A grounded in full article text and conversation history. Added related-article recommendations using bge embeddings, Milvus nearest-neighbor search, cross-encoder reranking, and duplicate filtering.</li>
-          <li>Rolled out an H5 low-code platform for marketing teams, creating <strong>20+ reusable components and pop-ups supporting 50+ campaign pages</strong>. Delivered visual layout and animation controls, template reuse, backend APIs, and publishing workflows; led internal training and maintenance.</li>
         </ul>
 
         <h3>
@@ -158,14 +168,6 @@
           <li>Implemented cross-session memory using keyword and vector retrieval, evidence-linked fact updates, version checks, and transactional writes. Combined asynchronous memory maintenance with token budgets and context compression to retain relevant information across conversations.</li>
           <li>Built a React console that streams execution state and exposes persistent traces for debugging. Added Langfuse experiments with isolated runtimes, databases, and working directories to evaluate single-turn and multi-turn tasks from consistent memory snapshots.</li>
         </ul>
-        <h3>H5-Lowcode — AI Page Builder</h3>
-        <p class="project-links"><span class="project-link"><strong>GitHub:</strong> <a href="https://github.com/AndrewZhuang16/h5-lowcode">github.com/<wbr>AndrewZhuang16/<wbr>h5-lowcode</a></span> <span class="project-link-separator">&nbsp;|&nbsp;</span> <span class="project-link"><strong>Demo:</strong> <a href="https://www.funet.top">www.funet.top</a></span></p>
-        <p class="project-tech-stack"><strong>Tech Stack:</strong> <span>React</span>, <span>TypeScript</span>, <span>Web Components</span>, <span>Zod</span></p>
-        <ul>
-          <li>Built a visual page builder combining natural-language generation, conversational edits, and drag-and-drop controls. Supported streaming feedback, live preview, undo/redo, and export to HTML, CSS, and JavaScript.</li>
-          <li>Unified generation and client validation through Zod schemas, component allowlists, and layout constraints to validate model output before updating the canvas. Separated the editor, component library, and code generator into reusable monorepo packages.</li>
-        </ul>
-
       <h2 id="education">Education</h2>
       <h3>
         <span>Ludong University</span>

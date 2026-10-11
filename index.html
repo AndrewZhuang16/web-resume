@@ -142,8 +142,8 @@
       <span class="time">2025.03 — 至今</span>
     </h3>
     <ul>
-      <li>负责集团知识库与智能客服的 AI 应用开发，交付覆盖身份规划、房产、教育及企业服务的知识检索与问答平台，累计接入约 3,200 份业务资料，支撑资料集中管理与员工查阅。</li>
-      <li>将 Kids Bay 智能客服与订单、物流、退款等中台业务连接，实现多轮咨询与业务办理；建立场景评测及问题回流机制，同一评测集上的端到端任务完成率由约 68% 提升至约 85%。</li>
+      <li>主导银河集团知识库项目技术选型、整体架构设计与核心链路开发，搭建从文档解析、图文增强、混合检索到多轮问答的完整平台，推动知识资料统一管理与检索应用落地，覆盖身份规划、房产、教育及企业服务，累计接入约 3,200 份业务资料。</li>
+      <li>设计 Kids Bay 智能客服 Agent 与业务流程协同架构，将模型意图识别、工具调用与确定性流程执行解耦，打通订单、物流查询及退款申请，支持多轮信息收集、任务切换与恢复；建立场景评测与问题回流机制，推动端到端任务完成率由约 68% 提升至约 85%。</li>
     </ul>
     <h3>
       <span>财新传媒有限公司</span>
@@ -152,7 +152,7 @@
     </h3>
     <ul>
       <li>负责财新各业务的前后端开发与部署交付，轻松读 AI 阅读助手的LangChain架构设计，在财新 App 内集成文章总结、文章问答与相关推荐，完成从阅读页面到模型服务的完整功能链路。</li>
-      <li>推动 H5 低代码平台在部门运营活动中落地，负责业务组件、后端接口、部署及内部培训推广，沉淀 20+ 组件与弹窗，支撑产出 50+ 运营活动页面，形成可复用的活动搭建与发布流程。</li>
+      <li>主导 H5 低代码平台在部门运营场景中的应用落地，推进业务组件建设、后端服务对接、部署发布与内部培训，沉淀 20+ 可复用组件与弹窗，支撑产出 50+ 运营活动页面，形成可复用的活动搭建与发布流程。</li>
     </ul>
     <h3>
       <span>飞鹤乳业</span>
@@ -187,31 +187,6 @@
       </li>
       <li>
         <strong>隔离评测与回归验证：</strong>接入 Langfuse 数据集实验，固定数据集版本、运行配置与 Skills，为每条用例创建独立 Runtime、数据库及工作目录，使用真实模型和工具执行单轮、多轮任务，支持从统一记忆快照启动；回传模型与工具轨迹供平台评估器评分，分离执行、同步和评分状态。
-      </li>
-    </ul>
-    <h3>
-      <a href="https://github.com/AndrewZhuang16/h5-lowcode" target="_blank" rel="noreferrer">H5-Lowcode · AI 页面搭建平台</a>
-    </h3>
-    <p>
-      面向 H5 页面搭建，将自然语言生成、对话式修改与可视化拖拽编辑结合，支持从页面初稿生成到人工调整、实时预览和代码导出，降低活动页面的搭建成本。
-    </p>
-    <p class="project-links">
-      <span class="project-link"><strong>GitHub：</strong><a href="https://github.com/AndrewZhuang16/h5-lowcode" target="_blank" rel="noreferrer">github.com/<wbr>AndrewZhuang16/<wbr>h5-lowcode</a></span>
-      <span class="project-link-separator">&nbsp;|&nbsp;</span>
-      <span class="project-link"><strong>预览：</strong><a href="https://www.funet.top" target="_blank" rel="noreferrer">www.funet.top</a></span>
-    </p>
-    <p class="project-tech-stack">
-      <strong>技术栈：</strong><span>React 18</span>、<span>TypeScript</span>、<span>Vite</span>、<span>Tailwind CSS</span>、<span>Web Components</span>、<span>pnpm Monorepo</span>、<span>Zod</span>、<span>OpenAI Compatible API</span>
-    </p>
-    <ul>
-      <li>
-        <strong>AI 生成与对话式编辑：</strong>接入大语言模型，结合页面 Schema、组件规范与对话上下文，实现页面生成及布局、文案和样式修改；支持流式反馈，生成结果经校验后同步画布，支持撤销与拖拽调整。
-      </li>
-      <li>
-        <strong>结构化输出与编辑约束：</strong>以 Zod 统一生成模式的 JSON Schema 与客户端校验契约，结合组件白名单、属性枚举、布局和事件规则校验并修正模型输出。
-      </li>
-      <li>
-        <strong>编辑器与代码生成：</strong>采用 Monorepo 拆分编辑器、Web Components 物料与代码生成器，实现拖拽布局、样式与动画配置、弹窗编辑、模板导入导出及撤销重做；基于统一 Schema 生成 HTML、CSS 与 JavaScript，串联实时预览、代码下载和部署。
       </li>
     </ul>
     <h2>项目经历</h2>
@@ -279,6 +254,35 @@
       </li>
     </ul>
     <h3>
+      <span>H5-Lowcode · AI 页面搭建与运营活动适配</span>
+      <span class="role">财新传媒｜全栈开发与维护</span>
+    </h3>
+    <p>
+      主导 H5 低代码平台在财新运营活动中的适配与交付，沉淀 20+ 可复用组件与弹窗，支撑产出 50+ 运营活动页面；围绕同一平台扩展 AI 页面生成与对话式编辑能力，串联自然语言搭建、可视化调整、实时预览与代码导出。
+    </p>
+    <p class="project-links">
+      <span class="project-link"><strong>GitHub：</strong><a href="https://github.com/AndrewZhuang16/h5-lowcode" target="_blank" rel="noreferrer">github.com/<wbr>AndrewZhuang16/<wbr>h5-lowcode</a></span>
+      <span class="project-link-separator">&nbsp;|&nbsp;</span>
+      <span class="project-link"><strong>预览：</strong><a href="https://www.funet.top" target="_blank" rel="noreferrer">www.funet.top</a></span>
+    </p>
+    <p class="project-tech-stack">
+      <strong>技术栈：</strong><span>React 18</span>、<span>TypeScript</span>、<span>Vite</span>、<span>Tailwind CSS</span>、<span>Web Components</span>、<span>pnpm Monorepo</span>、<span>Zod</span>、<span>OpenAI Compatible API</span>、<span>Node.js</span>、<span>NestJS</span>、<span>TypeORM</span>
+    </p>
+    <ul>
+      <li>
+        <strong>AI 生成与对话式编辑：</strong>接入大语言模型，结合页面 Schema、组件规范与对话上下文，实现页面生成及布局、文案和样式修改；支持流式反馈，生成结果经校验后同步画布，支持撤销与拖拽调整。
+      </li>
+      <li>
+        <strong>结构化输出与编辑约束：</strong>以 Zod 统一生成模式的 JSON Schema 与客户端校验契约，结合组件白名单、属性枚举、布局和事件规则校验并修正模型输出。
+      </li>
+      <li>
+        <strong>编辑器与代码生成：</strong>采用 Monorepo 拆分编辑器、Web Components 物料与代码生成器，实现拖拽布局、样式与动画配置、弹窗编辑、模板导入导出及撤销重做；基于统一 Schema 生成 HTML、CSS 与 JavaScript，串联实时预览、代码下载和部署。
+      </li>
+      <li>
+        <strong>后端服务与发布交付：</strong>开发业务接口并打通页面打包、上传与部署流程，后端接收 ZIP 产物并解压至活动目录；结合模板复用、实时预览与代码导出，完成从页面搭建到发布的全流程交付。
+      </li>
+    </ul>
+    <h3>
       <span>财新轻松读 · AI 阅读助手</span>
       <span class="role">财新传媒｜全流程开发</span>
     </h3>
@@ -297,27 +301,6 @@
       </li>
       <li>
         <strong>前后端与模型集成：</strong>基于 Next.js 开发财新 App 内嵌页面，完成摘要展示、问答交互与推荐文章入口；使用 NestJS 构建后端业务接口，集成 LangChain 模型调用、MySQL 数据存储与 Milvus 向量检索，完成从前端交互到后端服务、模型接入与部署的全流程交付。
-      </li>
-    </ul>
-    <h3>
-      <span>H5-Lowcode · 运营活动适配</span>
-      <span class="role">财新传媒｜全栈开发与维护</span>
-    </h3>
-    <p>
-      基于 h5-lowcode 对接部门运营活动业务，负责业务组件开发、后端接口、部署流程及内部推广，沉淀 20+ 组件与弹窗，支撑产出 50+ 运营活动页面。
-    </p>
-    <p class="project-tech-stack">
-      <strong>技术栈：</strong><span>React 18</span>、<span>TypeScript</span>、<span>Web Components</span>、<span>Tailwind CSS</span>、<span>Node.js</span>、<span>NestJS</span>、<span>TypeORM</span>
-    </p>
-    <ul>
-      <li>
-        <strong>业务物料与运营适配：</strong>围绕活动场景开发可配置组件、弹窗与内置动画，适配微信分享及页面配置，复用平台拖拽和模板能力完成活动搭建；负责部门内培训、推广与日常维护，将重复开发沉淀为可复用物料。
-      </li>
-      <li>
-        <strong>可视化编辑与交互：</strong>基于 React 实现组件拖拽定位、尺寸调整与样式配置，结合辅助线、弹窗可视化编辑和动画配置，支持运营直观调整活动布局与交互效果；接入 i18n 多语言，完善页面与分享配置。
-      </li>
-      <li>
-        <strong>页面生成与部署：</strong>串联前端 Schema 编辑、实时预览和代码打包，后端接收 ZIP 产物并解压至活动目录，完成页面部署；结合模板导入导出与撤销重做，支持活动页面复用和调整，打通从可视化搭建到发布的全流程。
       </li>
     </ul>
     <h3>其他项目经历</h3>
